@@ -71,7 +71,3 @@ Data disimpan terenkripsi di `~\.rightclick-ai\config.json`.
 - **Frontend:** Electron + Vanilla JS/CSS
 - **Backend:** Python + FastAPI
 - **AI:** Ollama (local), OpenAI, Gemini, Anthropic, OpenRouter (BYOK)
-
-## 📄 Lisensi
-
-MIT License
