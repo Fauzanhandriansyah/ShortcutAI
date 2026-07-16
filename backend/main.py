@@ -29,7 +29,7 @@ app = FastAPI(
     title="Right Click AI",
     description="AI-powered right-click context menu assistant",
     version="0.1.0",
-)
+) 
 
 # CORS — allow Electron renderer to connect
 app.add_middleware(
