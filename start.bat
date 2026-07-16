@@ -38,7 +38,7 @@ if not exist "electron\node_modules" (
     echo [Setup] Installing Electron dependencies...
     cd electron
     npm install
-    cd ..
+    cd .. 
     echo [Setup] Electron dependencies installed!
 )
 
