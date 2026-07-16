@@ -46,7 +46,7 @@ app.on('second-instance', () => {
 // --- App Lifecycle ---
 app.whenReady().then(async () => {
   // Start Python backend
-  startBackend();
+  startBackend(); 
 
   // Wait for backend to be ready
   await waitForBackend(15000);
@@ -86,7 +86,7 @@ function startBackend() {
     if (res.statusCode === 200) {
       console.log('[Backend] Already running externally, skipping spawn.');
       return;
-    }
+    } 
   });
   checkReq.on('error', () => {
     if (!isSpawningBackend) {
