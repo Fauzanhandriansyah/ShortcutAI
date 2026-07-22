@@ -16,7 +16,6 @@ from providers.openrouter import OpenRouterProvider
 
 logger = logging.getLogger(__name__)
 
-# Provider singleton cache for connection reuse
 _provider_cache: dict = {}
 
 
@@ -118,7 +117,6 @@ def resolve_prompt(
     if not prompt_obj:
         raise ValueError(f"Unknown action: {action_id}")
     
-    # Map language codes to names
     lang_map = {
         "id": "Indonesia",
         "en": "Inggris (English)",
