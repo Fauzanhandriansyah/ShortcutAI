@@ -52,7 +52,6 @@ def detect_content_type(content: str, has_image: bool = False) -> ContentType:
     if not content or not content.strip():
         return "text"
     
-    # Check for code patterns
     code_score = 0
     lines = content.strip().split('\n')
     
@@ -60,12 +59,10 @@ def detect_content_type(content: str, has_image: bool = False) -> ContentType:
         if pattern.search(content):
             code_score += 1
     
-    # Also check indentation patterns (common in code)
     indented_lines = sum(1 for line in lines if line.startswith('    ') or line.startswith('\t'))
     if len(lines) > 2 and indented_lines / len(lines) > 0.3:
         code_score += 2
     
-    # Threshold: if 3+ patterns match, it's probably code
     if code_score >= 3:
         return "code"
     
